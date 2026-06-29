@@ -1,0 +1,266 @@
+/* Variables de design */
+:root {
+  --primary-green: #10B981;
+  --primary-hover: #059669;
+  --dark-blue: #1E293B;
+  --text-gray: #5A6A85;
+  --bg-light: #F8FAFC;
+  --border-color: #E2E8F0;
+  --font-main: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/* Styles Généraux */
+body {
+  background-color: var(--bg-light);
+  color: var(--dark-blue);
+  font-family: var(--font-main);
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+  margin: 0 0 15px 0;
+}
+
+p {
+  color: var(--text-gray);
+}
+
+.text-green {
+  color: var(--primary-green);
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Barre de Navigation */
+.navbar {
+  background-color: #FFFFFF;
+  border-bottom: 1px solid var(--border-color);
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--dark-blue);
+}
+
+.nav-links a {
+  color: var(--dark-blue);
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 500;
+  font-size: 15px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--primary-green);
+}
+
+.nav-links .btn-nav {
+  background-color: var(--dark-blue);
+  color: #FFFFFF;
+  padding: 8px 16px;
+  border-radius: 6px;
+}
+
+.nav-links .btn-nav:hover {
+  background-color: var(--primary-green);
+  color: #FFFFFF;
+}
+
+/* Section Hero */
+.hero {
+  background-color: #FFFFFF;
+  padding: 80px 20px;
+  text-align: center;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.hero-container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 46px;
+  line-height: 1.2;
+  color: var(--dark-blue);
+}
+
+.hero-subtitle {
+  font-size: 19px;
+  margin-bottom: 35px;
+}
+
+/* Boutons */
+.btn-green {
+  display: inline-block;
+  background-color: var(--primary-green);
+  color: #FFFFFF;
+  padding: 14px 28px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-green:hover {
+  background-color: var(--primary-hover);
+}
+
+.btn-secondary {
+  display: inline-block;
+  background-color: #FFFFFF;
+  color: var(--dark-blue);
+  padding: 14px 28px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid var(--border-color);
+  margin-left: 10px;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: var(--bg-light);
+}
+
+.big-btn {
+  font-size: 18px;
+  padding: 16px 36px;
+}
+
+/* Sections */
+.section-padding {
+  padding: 60px 0;
+}
+
+.section-title {
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+/* Grilles et Cartes */
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1xl);
+  gap: 25px;
+}
+
+@media (max-width: 768px) {
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card-white {
+  background: #FFFFFF;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+  border: 1px solid var(--border-color);
+  text-align: center;
+}
+
+.icon-circle {
+  width: 60px;
+  height: 60px;
+  background-color: #E6F4EA;
+  color: var(--primary-green);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px auto;
+  font-size: 24px;
+}
+
+/* Zone Problème */
+.bg-light-card {
+  background-color: #FFFFFF;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 40px;
+}
+
+.problem-box {
+  padding: 20px;
+  border-left: 4px solid #EF4444;
+  background-color: var(--bg-light);
+  border-radius: 0 8px 8px 0;
+}
+
+.bad-news {
+  font-weight: 700;
+  color: #DC2626;
+  display: block;
+  margin-bottom: 8px;
+}
+
+/* Fonctionnalité principale */
+.feature-main {
+  text-align: left;
+  border-left: 5px solid var(--primary-green);
+  padding: 40px;
+}
+
+.feature-main h3 {
+  font-size: 22px;
+}
+
+/* CTA Final */
+.cta-final {
+  margin: 40px 0 80px 0;
+  background: linear-gradient(to right, #FFFFFF, #F1FDF5);
+}
+
+.cta-final h2 {
+  font-size: 32px;
+}
+
+.cta-final p {
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--dark-blue);
+  color: #FFFFFF;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.footer p {
+  color: #94A3B8;
+  margin: 0;
+  font-size: 14px;
+}
